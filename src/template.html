@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body
+    class="bg-gradient-to-r from-primary-500 from-20% via-primary-400 via-50% to-primary-500 to-80%"
+  >
+    <!-- navbar -->
+    <div></div>
+    <h1 class="text-white">Pomodoro JS</h1>
+
+    <!-- contenedor principal -->
+    <div
+      class="h-screen mx-10 md:mx-40 my-5 flex justify-center items-start gap-7"
+    >
+      <!-- widget pomodoro -->
+      <div
+        class="w-48 h-80 px-10 flex flex-col items-center gap-2 bg-primary-700 py-10 px-5 rounded-3xl shadow-md"
+      >
+        <!-- pomodoros realizados -->
+        <div
+          id="completed-pomodoro"
+          class="flex justify-center items-center gap-2"
+        >
+          <div class="w-3 h-3 rounded-full bg-primary-950"></div>
+          <div class="w-3 h-3 rounded-full bg-slate-300"></div>
+          <div class="w-3 h-3 rounded-full bg-slate-300"></div>
+          <div class="w-3 h-3 rounded-full bg-slate-300"></div>
+        </div>
+        <!-- total pomodoros -->
+        <div id="total-pomodoro" class="self-center">
+          <p class="text-primary-100 text-sm">Total: 0</p>
+        </div>
+        <!-- contador -->
+        <div class="flex flex-1 justify-center items-center">
+          <h2 id="pomodoro-contador" class="text-primary-100 text-4xl">
+            25:00
+          </h2>
+        </div>
+        <!-- boton pausa/continuar -->
+        <div class="flex justify-between items-center gap-2">
+          <div
+            id="restart-button"
+            class="w-10 h-10 rounded-full bg-primary-200 flex justify-center items-center cursor-pointer"
+          >
+            <span class="material-icons text-primary-900">restart_alt</span>
+          </div>
+          <div
+            id="pause-play-button"
+            class="w-10 h-10 rounded-full bg-primary-200 flex justify-center items-center cursor-pointer"
+          >
+            <span class="material-icons text-primary-900">play_arrow</span>
+          </div>
+          <div
+            id="next-button"
+            class="sesion-pomodoro w-10 h-10 rounded-full bg-primary-200 flex justify-center items-center cursor-pointer"
+          >
+            <span class="material-icons text-primary-900">skip_next</span>
+          </div>
+        </div>
+      </div>
+      <!-- opciones -->
+      <div class="h-full w-48 text-sm flex flex-col justify-start gap-4">
+        <button
+          id="nueva-sesion-button"
+          class="w-28 bg-gradient-to-r from-primary-100 to-primary-200 hover:from-primary-300 hover:to-primary-200 text-primary-950 font-bold py-2 px-3 text-sm rounded shadow-lg active:shadow-xl focus:outline-none grow-0"
+        >
+          Nueva sesión
+        </button>
+        <div>
+          <p class="font-bold">Total de tiempo estudiado (min):</p>
+          <span id="total-estudiado" class="font-semibold">3h 2min</span>
+        </div>
+        <!-- configurar tiempos estudio y descanso -->
+        <div class="flex justify-start gap-5">
+          <p class="font-bold">Duración de estudio (minutos):</p>
+          <input
+            class="input-number w-10 appearance-none rounded-md px-1 py-1"
+            type="number"
+            name="duration-estudio"
+            id="duration-estudio"
+            min="10"
+            max="60"
+            value="25"
+          />
+        </div>
+        <div class="flex justify-start gap-5">
+          <p class="font-bold">Duración de descanso (minutos):</p>
+          <input
+            class="input-number w-10 appearance-none rounded-md px-1 py-1"
+            type="number"
+            name="duration-descanso"
+            id="duration-descanso"
+            min="1"
+            max="10"
+            value="5"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

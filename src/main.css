@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "material-icons/iconfont/material-icons.css";
+
+/* @font-face {
+  font-family: 'WorkSans';
+  src: url('./WorkSans-Italic-VariableFont_wght.ttf') format('ttf'),
+    url('./WorkSans-VariableFont_wght.ttf') format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+ */
